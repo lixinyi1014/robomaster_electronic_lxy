@@ -229,8 +229,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
       }
    }
 }
-#define BREATH_STEP_MS   2      // 呼吸：每 2 ms 改一次亮度，0→999→0 约 4 秒
-#define BLINK_HALF_MS    500    // 闪烁：每 500 ms 翻转一次，一亮一灭共 1 秒
+#define BREATH_STEP_MS   2      // 呼吸
+#define BLINK_HALF_MS    500    // 闪烁
 
 static void LedSet(uint16_t ccr)
 {
@@ -240,10 +240,10 @@ static void LedSet(uint16_t ccr)
 void UpdateLed(uint8_t mode, uint32_t now)
 {
    //static uint8_t  current_mode = 0;
-   static uint32_t last_tick = 0;        // 这个模式上一次改 CCR 的时间
+   static uint32_t last_tick = 0;
    static uint16_t pulse = 0;            // 呼吸
-   static int8_t   dir = 1;              // 呼吸用：+1 变亮，-1 变暗
-   static uint8_t  blink_on = 0;         // 闪烁
+   static int8_t   dir = 1;              // 呼吸
+   static uint8_t  blink_on = 0;         
 
    switch (mode)
    {
@@ -252,8 +252,8 @@ void UpdateLed(uint8_t mode, uint32_t now)
          {
             last_tick = now;
             pulse += dir;
-            if (pulse >= 999)  dir = -1;   // 到最亮，开始变暗
-            else if (pulse <= 0) dir = 1;  // 到最暗，开始变亮
+            if (pulse >= 999)  dir = -1;
+            else if (pulse <= 0) dir = 1;
             LedSet(pulse);
          }
          break;
