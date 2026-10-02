@@ -34,7 +34,7 @@ void  HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size) {
 }
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart) {
     if (huart == &huart3) {
-        HAL_UART_AbortReceive(huart);   // 确保接收完全停止，状态恢复成 READY
+        HAL_UART_AbortReceive(huart);
         remote.init();
     }
 }
