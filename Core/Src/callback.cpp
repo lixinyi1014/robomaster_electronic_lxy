@@ -4,6 +4,7 @@
 #include <cstring>
 #include "main.h"
 #include "usart.h"
+#include "remote.h"
 extern uint8_t rx_msg[10];
 static uint8_t tx_msg[10];
 
@@ -21,6 +22,19 @@ void  HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size) {
             || HAL_UARTEx_GetRxEventType(huart) == HAL_UART_RXEVENT_TC)) {
         HAL_UART_Transmit_IT(&huart1, rx_msg, Size);
         HAL_UARTEx_ReceiveToIdle_DMA(&huart1,rx_msg,10);
-
+    }
+    if (remote.rxMsgCheck(huart)) {
+        if (Size == RC_FRAME_LEN) {
+            remote.rxMsgCallback(huart->pRxBuffPtr);
+        }
+        else {
+            remote.init();
+        }
+    }
+}
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart) {
+    if (huart == &huart3) {
+        HAL_UART_AbortReceive(huart);   // 确保接收完全停止，状态恢复成 READY
+        remote.init();
     }
 }

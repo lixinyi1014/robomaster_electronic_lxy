@@ -56,7 +56,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void remote_init(void);
+void remote_handle(void);
 /* USER CODE END 0 */
 
 /**
@@ -91,11 +92,13 @@ int main(void)
   MX_DMA_Init();
   MX_USART1_UART_Init();
   MX_USART6_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   //uint8_t tx_msg[] = "RoboMaster 2027";
   //HAL_UART_Receive_IT(&huart1, rx_msg, 1);
   //HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
   HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_msg, 10);
+  remote_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,6 +108,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    remote_handle();
+    HAL_Delay(1);
    // HAL_UART_Transmit(&huart1, tx_msg, sizeof(tx_msg), 1000);
    // HAL_Delay(100);
   }

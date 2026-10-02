@@ -33,7 +33,10 @@ enable_language(C ASM)
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME}
-        Core/Src/callback.cpp)
+        Core/Src/callback.cpp
+        Core/Inc/connect.hpp
+        Core/Inc/remote.h
+        Core/Src/remote.cpp)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
