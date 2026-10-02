@@ -94,7 +94,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   //uint8_t tx_msg[] = "RoboMaster 2027";
   //HAL_UART_Receive_IT(&huart1, rx_msg, 1);
-  HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
+  //HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
+  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, rx_msg, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
