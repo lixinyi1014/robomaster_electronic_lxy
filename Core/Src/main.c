@@ -45,7 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t rx_msg[4];
+uint8_t rx_msg[10];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -93,8 +93,8 @@ int main(void)
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
   //uint8_t tx_msg[] = "RoboMaster 2027";
-  HAL_UART_Receive_IT(&huart1, rx_msg, 1);
-  HAL_UART_Receive_DMA(&huart1, rx_msg, 1);
+  //HAL_UART_Receive_IT(&huart1, rx_msg, 1);
+  HAL_UART_Receive_DMA(&huart1, rx_msg, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
