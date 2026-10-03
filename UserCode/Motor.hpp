@@ -8,6 +8,13 @@ public:
 
     void canRxMsgCallback(const uint8_t rx_data[8]);
 
+    // 出口：控制逻辑读取
+    float angle() const;          // 输出轴角度（度）
+    float speedRpm() const;       // 转子转速（RPM）
+    float currentAmps() const;    // 转矩电流（A）
+    float temperatureC() const;   // 温度（℃）
+    bool  hasFeedback() const;    // 收到过帧？
+
     void setTxCurrent(float amperes,uint8_t motor_id);
     uint8_t* getTxData();
 

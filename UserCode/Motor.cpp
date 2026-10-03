@@ -40,9 +40,9 @@ void Motor::rxdataTOmsg() {
 
 
 void Motor::setTxCurrent(float amperes, uint8_t motor_id) {
-    if (motor_id < 1 || motor_id > 4) return;          // 0x200 帧只管 1~4 号
+    if (motor_id < 1 || motor_id > 4) return;
 
-    if (amperes >  kMaxCurrentA) amperes =  kMaxCurrentA;   // 限幅，防止溢出
+    if (amperes >  kMaxCurrentA) amperes =  kMaxCurrentA;
     if (amperes < -kMaxCurrentA) amperes = -kMaxCurrentA;
 
     int16_t raw = (int16_t)(amperes * kMaxCurrentRaw / kMaxCurrentA);
@@ -52,3 +52,9 @@ void Motor::setTxCurrent(float amperes, uint8_t motor_id) {
 }
 
 uint8_t* Motor::getTxData() { return tx_data_; }
+
+float Motor::angle() const { return angle_; }
+float Motor::speedRpm() const { return speedRpm_; }
+float Motor::currentAmps() const { return currentA_; }
+float Motor::temperatureC() const { return tempC_; }
+bool  Motor::hasFeedback() const { return received_; }

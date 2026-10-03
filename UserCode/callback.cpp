@@ -23,7 +23,7 @@ extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim) {
     if (htim->Instance != TIM6) return;
     if (HAL_CAN_GetTxMailboxesFreeLevel(&hcan1)>0) {
         HAL_CAN_AddTxMessage(&hcan1,&tx_header,motor.getTxData(),&can_tx_mailbox);
-        motor.setTxCurrent(1.5f, 1);//电机转动
+        motor.setTxCurrent(1.06f, 1);//电机转动
     }
 }
 
