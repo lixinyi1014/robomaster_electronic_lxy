@@ -24,6 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "can_user.h"
 
 /* USER CODE END Includes */
 
@@ -50,6 +51,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -92,6 +94,12 @@ int main(void)
   MX_CAN2_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
+  if (HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) != HAL_OK ||
+    HAL_CAN_Start(&hcan1) != HAL_OK ||
+    HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING)!= HAL_OK ||
+    HAL_TIM_Base_Start_IT(&htim6) != HAL_OK) {
+    Error_Handler();
+  }
 
   /* USER CODE END 2 */
 
@@ -102,6 +110,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
 }
