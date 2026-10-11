@@ -5,4 +5,15 @@
 #include "motor.h"
 #include "pid.h"
 
+Motor::Motor(float sKp,float sKi,float sKd,
+             float pKp,float pKi,float pKd,
+             ControlMethod_e controlMethod) {
+    spid_.init(sKp,sKi,sKd,0.0f);
+    ppid_.init(pKp,pKi,pKd,0.0f);
+    control_method_= controlMethod;
+}
+
+void Motor::handle() {
+
+}
 
