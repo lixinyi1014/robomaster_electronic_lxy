@@ -14,6 +14,15 @@ Motor::Motor(float sKp,float sKi,float sKd,
 }
 
 void Motor::handle() {
+}
+
+void Motor::setPosition(float target_position,float feedforward_speed = 0.0f,float feedforward_intensity = 0.0f) {
+    target_speed_ = ppid_.calc(target_position,feedforward_intensity);
+}
+void setSpeed(float target_speed,float feedforward_intensity) {
+
+}
+void setIntensity(float intensity) {
 
 }
 

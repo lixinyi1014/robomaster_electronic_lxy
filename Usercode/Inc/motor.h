@@ -5,25 +5,62 @@
 #ifndef RM5_MOTOR_H
 #define RM5_MOTOR_H
 #include "pid.h"
+#include <stdint.h>
 class Motor {
-private:
-    PID spid_,ppid_;
-    float target_angle_, fdb_angle_;
-    float target_speed_, fdb_speed_;
-    float feedforward_intensity_, intensity_;
+public:
     typedef enum ControlMethod_{
         POSITION_SPEED,  // 位置+速度控制
         SPEED,// 速度控制
         TORQUE,// 力矩控制
         } ControlMethod_e;
+private:
+    //--- 配置 ---
+    const float ratio_ = 36; //减速比（M2006减速比32：1）
+    static constexpr uint16_t kEncoderRange = 8192;
+
+    //--- 这一帧解出来的 ---
+    float ecd_angle_ = 0;   //机械角度（0~8191）
+    float speedRpm_ = 0;
+    float currentA_ = 0;
+
+    //--- 连续角度 ---
+    float angle_ = 0;       //累计角度
+    float last_ecd_ = 0;    //上一帧
+    bool received_ = false; //TODO:第一帧pid是否需要这个处理？
+
+    //--- 待发送 ---
+    uint8_t tx_data_[8] = {0};
+
+    //PID相关
+    PID spid_,ppid_;
+    float target_angle_, fdb_angle_;
+    float target_speed_, fdb_speed_;
+    float feedforward_intensity_, intensity_;
     ControlMethod_e control_method_;
+
 public:
+
+    //初始化
     Motor(float sKp,float sKi,float sKd,
           float pKp,float pKi,float pKd,
           ControlMethod_e controlMethod);
+
+    //上层的一些操作
     void handle();
     void setPosition(float target_position,float feedforward_speed,float feedforward_intensity);
     void setSpeed(float target_speed,float feedforward_intensity);
     void setIntensity(float intensity);
+
+    //入口：can接收中断调用
+    void canRxMsgCallback(const uint8_t rx_data[8]);
+
+    //出口
+    float angle() const;
+    float speedRpm() const;
+    float currentAmps() const;
+    bool hasFeedback() const;
+
+    void setTxCurrent(float amperes, uint8_t motor_id);
+    uint8_t* getTxData();
 };
 #endif //RM5_MOTOR_H
