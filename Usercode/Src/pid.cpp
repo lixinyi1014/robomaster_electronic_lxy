@@ -8,17 +8,19 @@
 //C610控制转矩电流值范围为-10000~10000
 #include "pid.h"
 
-void PID::init(float kp, float ki, float kd, float d_filter){
+void PID::init(float kp, float ki, float kd, float i_max,float out_max,float d_filter){
     kp_ = kp;
     ki_ = ki;
     kd_ = kd;
+    i_max_ = i_max;
+    out_max_ = out_max;
     d_filter_ = d_filter;
     reset();
 }
 
 void PID::reset() {
     err_ = 0.0f;
-    err_sum_ = 0.0f;
+    integral_ = 0.0f;
     last_err_ = 0.0f;
     last_d_ = 0.0f;
 }
@@ -35,15 +37,16 @@ float PID::limit_out(float o) {
 }
 float PID::filter(float output) {
     output = (1-d_filter_)*last_d_ + d_filter_*output;
+    last_d_ = output;
     return output;
 }
 
 float PID::calc(float ref, float fdb) {
     err_ = ref - fdb;
     float p = kp_ * err_;
-    float i = ki_ * (err_sum_ + err_);
-    i = limit_in(i);
-    err_sum_ += err_;
+    integral_ += ki_ * err_;
+    integral_ = limit_in(integral_);
+    float i = integral_;
     float d = kd_ * (err_-last_err_);
     d = filter(d);
     last_err_ = err_;

@@ -25,7 +25,7 @@ private:
 
     //--- 连续角度 ---
     float angle_ = 0;       //累计角度
-    float last_ecd_ = 0;    //上一帧
+    float last_encoder_ = 0;    //上一帧
     bool received_ = false; //TODO:第一帧pid是否需要这个处理？
 
     //--- 待发送 ---
@@ -33,20 +33,22 @@ private:
 
     //PID相关
     PID spid_,ppid_;
-    float target_angle_, fdb_angle_;
-    float target_speed_, fdb_speed_;
-    float feedforward_intensity_, intensity_;
-    ControlMethod_e control_method_;
+    float target_angle_ = 0.0f, fdb_angle_ = 0.0f;
+    float target_speed_ = 0.0f, fdb_speed_ = 0.0f;
+    float feedforward_intensity_ = 0.0f, intensity_ = 0.0f;
+    float feedforward_speed_ = 0.0f;
+    ControlMethod_e control_method_ = POSITION_SPEED;
 
 public:
 
     //初始化
-    Motor(float sKp,float sKi,float sKd,
+    void init(float sKp,float sKi,float sKd,
           float pKp,float pKi,float pKd,
           ControlMethod_e controlMethod);
 
     //上层的一些操作
     void handle();
+    void stop();
     void setPosition(float target_position,float feedforward_speed,float feedforward_intensity);
     void setSpeed(float target_speed,float feedforward_intensity);
     void setIntensity(float intensity);
@@ -60,7 +62,7 @@ public:
     float currentAmps() const;
     bool hasFeedback() const;
 
-    void setTxCurrent(float amperes, uint8_t motor_id);
     uint8_t* getTxData();
+    void setTxCurrent(float current);
 };
 #endif //RM5_MOTOR_H

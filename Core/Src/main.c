@@ -24,6 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "motor.h"
 
 /* USER CODE END Includes */
 
@@ -51,7 +52,8 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void INIT(void);
+void HANDLE(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -92,13 +94,14 @@ int main(void)
   MX_CAN2_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-
+  INIT();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    HANDLE();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
