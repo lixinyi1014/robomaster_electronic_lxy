@@ -17,12 +17,10 @@ volatile uint8_t stop_flag = 0;
 extern "C" void INIT(void) {
     motor.init(0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,Motor::POSITION_SPEED);
     motor.setPosition(0.0f,0.0f,0.0f);
-    if ((HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) == HAL_OK)&&(
-        HAL_CAN_Start(&hcan1) == HAL_OK)&&(
-        HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING) == HAL_OK)) {
-        __HAL_TIM_CLEAR_FLAG(&htim6,TIM_FLAG_UPDATE);
-        HAL_TIM_Base_Start_IT(&htim6);
-    }
+    stop_flag = 0;
+    if (HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) != HAL_OK) Error_Handler();
+    if (HAL_CAN_Start(&hcan1) != HAL_OK) Error_Handler();
+    if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK) Error_Handler();
 }
 
 extern "C" void HANDLE(void) {
@@ -52,11 +50,5 @@ extern "C" void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan){
         }
 }
 
-extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim) {
-    if (htim->Instance != TIM6) return;
-    if (HAL_CAN_GetTxMailboxesFreeLevel(&hcan1)>0) {
-        HAL_CAN_AddTxMessage(&hcan1,&tx_header,motor.getTxData(),&can_tx_mailbox);
-       // motor.setTxCurrent(1.06f, 1);//电机转动
-    }
-}
+
 
