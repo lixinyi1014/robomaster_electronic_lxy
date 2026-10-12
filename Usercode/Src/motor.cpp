@@ -4,13 +4,14 @@
 
 #include "motor.h"
 #include "pid.h"
-volatile float angle = 0.0f;
+#include <math.h>
+volatile float g_ff_gain = -0.36f;//0.1*9.8*0.065/0.18 = 0.354
 volatile float speed = 0.0f;
 void Motor::init(float sKp,float sKi,float sKd,
              float pKp,float pKi,float pKd,
              ControlMethod_e controlMethod) {
-    spid_.init(sKp,sKi,sKd,3.0f,10.0f,0.1f);//(-10,10)
-    ppid_.init(pKp,pKi,pKd,0.0f,3000.0,1.0f);
+    spid_.init(sKp,sKi,sKd,1.0f,10.0f,0.1f);//(-10,10)
+    ppid_.init(pKp,pKi,pKd,3.0f,3000.0,1.0f);
     control_method_= controlMethod;
     stop();
 }
@@ -19,7 +20,7 @@ void Motor::handle() {
     if (!received_) { stop(); return; }
     fdb_angle_ = angle_;
     fdb_speed_ = speedRpm_;
-
+    feedforward_intensity_ = g_ff_gain * sinf((angle_) * 3.14f/180.0f);
     if (control_method_ == POSITION_SPEED)
     {
         target_speed_ = ppid_.calc(target_angle_,fdb_angle_) + feedforward_speed_;

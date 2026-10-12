@@ -1,5 +1,21 @@
 Archive member included to satisfy reference by file (symbol)
 
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+                              CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj (sinf)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o) (__kernel_cosf)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o) (__kernel_sinf)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o) (__ieee754_rem_pio2f)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o) (fabsf)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o) (__kernel_rem_pio2f)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o) (scalbnf)
+C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+                              C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o) (floorf)
 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
                               cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj (__aeabi_uldivmod)
 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
@@ -3024,10 +3040,62 @@ Discarded input sections
  .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .group         0x00000000        0xc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .text          0x00000000        0x0 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .data          0x00000000        0x0 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .bss           0x00000000        0x0 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
- .bss.angle     0x00000000        0x4 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .bss.speed     0x00000000        0x4 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .text._ZN5Motor8setSpeedEff
                 0x00000000       0x32 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
@@ -3041,6 +3109,41 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .debug_macro   0x00000000       0x6a CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .debug_macro   0x00000000      0x1df CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x2a CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000      0x197 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000      0x1de CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00000000       0x29 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+ .text          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+ .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+ .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
  .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .bss           0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .data          0x00000000        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
@@ -3521,7 +3624,7 @@ LOAD C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+s
                 0x08000000                g_pfnVectors
                 0x08000188                        . = ALIGN (0x4)
 
-.text           0x08000188     0x3498
+.text           0x08000188     0x4158
                 0x08000188                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000188       0x40 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -3690,301 +3793,328 @@ LOAD C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+s
                 0x0800271c       0xb0 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
                 0x0800271c                Motor::Motor()
                 0x0800271c                Motor::Motor()
- .text.INIT     0x080027cc       0xe4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+ .text.INIT     0x080027cc       0xe8 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
                 0x080027cc                INIT
- .text.HANDLE   0x080028b0       0xa8 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x080028b0                HANDLE
+ .text.HANDLE   0x080028b4       0xa8 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x080028b4                HANDLE
  .text.HAL_CAN_RxFifo0MsgPendingCallback
-                0x08002958       0x78 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x08002958                HAL_CAN_RxFifo0MsgPendingCallback
+                0x0800295c       0x78 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x0800295c                HAL_CAN_RxFifo0MsgPendingCallback
  .text.HAL_TIM_PeriodElapsedCallback
-                0x080029d0       0x34 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x080029d0                HAL_TIM_PeriodElapsedCallback
+                0x080029d4       0x34 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x080029d4                HAL_TIM_PeriodElapsedCallback
  .text._Z41__static_initialization_and_destruction_0v
-                0x08002a04       0x14 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x08002a08       0x14 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
  .text._GLOBAL__sub_I_motor
-                0x08002a18        0xa CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
- .text.main     0x08002a22       0x26 CMakeFiles/rm5.dir/Core/Src/main.c.obj
-                0x08002a22                main
+                0x08002a1c        0xa CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+ .text.main     0x08002a26       0x26 CMakeFiles/rm5.dir/Core/Src/main.c.obj
+                0x08002a26                main
  .text.SystemClock_Config
-                0x08002a48       0xd4 CMakeFiles/rm5.dir/Core/Src/main.c.obj
-                0x08002a48                SystemClock_Config
+                0x08002a4c       0xd4 CMakeFiles/rm5.dir/Core/Src/main.c.obj
+                0x08002a4c                SystemClock_Config
  .text.Error_Handler
-                0x08002b1c        0xc CMakeFiles/rm5.dir/Core/Src/main.c.obj
-                0x08002b1c                Error_Handler
+                0x08002b20        0xc CMakeFiles/rm5.dir/Core/Src/main.c.obj
+                0x08002b20                Error_Handler
  .text.MX_GPIO_Init
-                0x08002b28       0x88 CMakeFiles/rm5.dir/Core/Src/gpio.c.obj
-                0x08002b28                MX_GPIO_Init
+                0x08002b2c       0x88 CMakeFiles/rm5.dir/Core/Src/gpio.c.obj
+                0x08002b2c                MX_GPIO_Init
  .text.MX_CAN1_Init
-                0x08002bb0       0x6c CMakeFiles/rm5.dir/Core/Src/can.c.obj
-                0x08002bb0                MX_CAN1_Init
+                0x08002bb4       0x6c CMakeFiles/rm5.dir/Core/Src/can.c.obj
+                0x08002bb4                MX_CAN1_Init
  .text.MX_CAN2_Init
-                0x08002c1c       0x6c CMakeFiles/rm5.dir/Core/Src/can.c.obj
-                0x08002c1c                MX_CAN2_Init
+                0x08002c20       0x6c CMakeFiles/rm5.dir/Core/Src/can.c.obj
+                0x08002c20                MX_CAN2_Init
  .text.HAL_CAN_MspInit
-                0x08002c88      0x150 CMakeFiles/rm5.dir/Core/Src/can.c.obj
-                0x08002c88                HAL_CAN_MspInit
+                0x08002c8c      0x150 CMakeFiles/rm5.dir/Core/Src/can.c.obj
+                0x08002c8c                HAL_CAN_MspInit
  .text.MX_TIM6_Init
-                0x08002dd8       0x6c CMakeFiles/rm5.dir/Core/Src/tim.c.obj
-                0x08002dd8                MX_TIM6_Init
+                0x08002ddc       0x6c CMakeFiles/rm5.dir/Core/Src/tim.c.obj
+                0x08002ddc                MX_TIM6_Init
  .text.HAL_TIM_Base_MspInit
-                0x08002e44       0x50 CMakeFiles/rm5.dir/Core/Src/tim.c.obj
-                0x08002e44                HAL_TIM_Base_MspInit
+                0x08002e48       0x50 CMakeFiles/rm5.dir/Core/Src/tim.c.obj
+                0x08002e48                HAL_TIM_Base_MspInit
  .text.NMI_Handler
-                0x08002e94        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002e94                NMI_Handler
+                0x08002e98        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002e98                NMI_Handler
  .text.HardFault_Handler
-                0x08002e9c        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002e9c                HardFault_Handler
+                0x08002ea0        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002ea0                HardFault_Handler
  .text.MemManage_Handler
-                0x08002ea4        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002ea4                MemManage_Handler
+                0x08002ea8        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002ea8                MemManage_Handler
  .text.BusFault_Handler
-                0x08002eac        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002eac                BusFault_Handler
+                0x08002eb0        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002eb0                BusFault_Handler
  .text.UsageFault_Handler
-                0x08002eb4        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002eb4                UsageFault_Handler
+                0x08002eb8        0x8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002eb8                UsageFault_Handler
  .text.SVC_Handler
-                0x08002ebc        0xe CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002ebc                SVC_Handler
+                0x08002ec0        0xe CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002ec0                SVC_Handler
  .text.DebugMon_Handler
-                0x08002eca        0xe CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002eca                DebugMon_Handler
+                0x08002ece        0xe CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002ece                DebugMon_Handler
  .text.PendSV_Handler
-                0x08002ed8        0xe CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002ed8                PendSV_Handler
+                0x08002edc        0xe CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002edc                PendSV_Handler
  .text.SysTick_Handler
-                0x08002ee6        0xc CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002ee6                SysTick_Handler
- *fill*         0x08002ef2        0x2 
+                0x08002eea        0xc CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002eea                SysTick_Handler
+ *fill*         0x08002ef6        0x2 
  .text.CAN1_RX0_IRQHandler
-                0x08002ef4       0x14 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002ef4                CAN1_RX0_IRQHandler
+                0x08002ef8       0x14 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002ef8                CAN1_RX0_IRQHandler
  .text.TIM6_DAC_IRQHandler
-                0x08002f08       0x14 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002f08                TIM6_DAC_IRQHandler
+                0x08002f0c       0x14 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002f0c                TIM6_DAC_IRQHandler
  .text.HAL_MspInit
-                0x08002f1c       0x50 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08002f1c                HAL_MspInit
+                0x08002f20       0x50 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08002f20                HAL_MspInit
  .text.Reset_Handler
-                0x08002f6c       0x50 CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
-                0x08002f6c                Reset_Handler
+                0x08002f70       0x50 CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
+                0x08002f70                Reset_Handler
  .text.Default_Handler
-                0x08002fbc        0x2 CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
-                0x08002fbc                RTC_Alarm_IRQHandler
-                0x08002fbc                HASH_RNG_IRQHandler
-                0x08002fbc                EXTI2_IRQHandler
-                0x08002fbc                TIM8_CC_IRQHandler
-                0x08002fbc                TIM1_CC_IRQHandler
-                0x08002fbc                DMA2_Stream5_IRQHandler
-                0x08002fbc                DMA1_Stream5_IRQHandler
-                0x08002fbc                PVD_IRQHandler
-                0x08002fbc                SDIO_IRQHandler
-                0x08002fbc                TAMP_STAMP_IRQHandler
-                0x08002fbc                CAN2_RX1_IRQHandler
-                0x08002fbc                EXTI3_IRQHandler
-                0x08002fbc                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08002fbc                TIM1_UP_TIM10_IRQHandler
-                0x08002fbc                TIM8_UP_TIM13_IRQHandler
-                0x08002fbc                I2C3_ER_IRQHandler
-                0x08002fbc                EXTI0_IRQHandler
-                0x08002fbc                I2C2_EV_IRQHandler
-                0x08002fbc                DMA1_Stream2_IRQHandler
-                0x08002fbc                FPU_IRQHandler
-                0x08002fbc                OTG_HS_WKUP_IRQHandler
-                0x08002fbc                CAN2_SCE_IRQHandler
-                0x08002fbc                DMA2_Stream2_IRQHandler
-                0x08002fbc                SPI1_IRQHandler
-                0x08002fbc                TIM1_BRK_TIM9_IRQHandler
-                0x08002fbc                DCMI_IRQHandler
-                0x08002fbc                CAN2_RX0_IRQHandler
-                0x08002fbc                DMA2_Stream3_IRQHandler
-                0x08002fbc                USART6_IRQHandler
-                0x08002fbc                USART3_IRQHandler
-                0x08002fbc                CAN1_RX1_IRQHandler
-                0x08002fbc                UART5_IRQHandler
-                0x08002fbc                DMA2_Stream0_IRQHandler
-                0x08002fbc                TIM4_IRQHandler
-                0x08002fbc                I2C1_EV_IRQHandler
-                0x08002fbc                DMA1_Stream6_IRQHandler
-                0x08002fbc                DMA1_Stream1_IRQHandler
-                0x08002fbc                UART4_IRQHandler
-                0x08002fbc                TIM3_IRQHandler
-                0x08002fbc                RCC_IRQHandler
-                0x08002fbc                TIM8_BRK_TIM12_IRQHandler
-                0x08002fbc                Default_Handler
-                0x08002fbc                EXTI15_10_IRQHandler
-                0x08002fbc                ADC_IRQHandler
-                0x08002fbc                DMA1_Stream7_IRQHandler
-                0x08002fbc                TIM7_IRQHandler
-                0x08002fbc                CAN2_TX_IRQHandler
-                0x08002fbc                TIM5_IRQHandler
-                0x08002fbc                DMA2_Stream7_IRQHandler
-                0x08002fbc                I2C3_EV_IRQHandler
-                0x08002fbc                EXTI9_5_IRQHandler
-                0x08002fbc                RTC_WKUP_IRQHandler
-                0x08002fbc                ETH_WKUP_IRQHandler
-                0x08002fbc                SPI2_IRQHandler
-                0x08002fbc                OTG_HS_EP1_IN_IRQHandler
-                0x08002fbc                DMA1_Stream0_IRQHandler
-                0x08002fbc                CAN1_TX_IRQHandler
-                0x08002fbc                EXTI4_IRQHandler
-                0x08002fbc                FSMC_IRQHandler
-                0x08002fbc                ETH_IRQHandler
-                0x08002fbc                OTG_HS_EP1_OUT_IRQHandler
-                0x08002fbc                WWDG_IRQHandler
-                0x08002fbc                TIM2_IRQHandler
-                0x08002fbc                OTG_FS_WKUP_IRQHandler
-                0x08002fbc                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08002fbc                OTG_HS_IRQHandler
-                0x08002fbc                EXTI1_IRQHandler
-                0x08002fbc                USART2_IRQHandler
-                0x08002fbc                I2C2_ER_IRQHandler
-                0x08002fbc                DMA2_Stream1_IRQHandler
-                0x08002fbc                CAN1_SCE_IRQHandler
-                0x08002fbc                FLASH_IRQHandler
-                0x08002fbc                DMA2_Stream4_IRQHandler
-                0x08002fbc                USART1_IRQHandler
-                0x08002fbc                OTG_FS_IRQHandler
-                0x08002fbc                SPI3_IRQHandler
-                0x08002fbc                DMA1_Stream4_IRQHandler
-                0x08002fbc                I2C1_ER_IRQHandler
-                0x08002fbc                DMA2_Stream6_IRQHandler
-                0x08002fbc                DMA1_Stream3_IRQHandler
+                0x08002fc0        0x2 CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
+                0x08002fc0                RTC_Alarm_IRQHandler
+                0x08002fc0                HASH_RNG_IRQHandler
+                0x08002fc0                EXTI2_IRQHandler
+                0x08002fc0                TIM8_CC_IRQHandler
+                0x08002fc0                TIM1_CC_IRQHandler
+                0x08002fc0                DMA2_Stream5_IRQHandler
+                0x08002fc0                DMA1_Stream5_IRQHandler
+                0x08002fc0                PVD_IRQHandler
+                0x08002fc0                SDIO_IRQHandler
+                0x08002fc0                TAMP_STAMP_IRQHandler
+                0x08002fc0                CAN2_RX1_IRQHandler
+                0x08002fc0                EXTI3_IRQHandler
+                0x08002fc0                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08002fc0                TIM1_UP_TIM10_IRQHandler
+                0x08002fc0                TIM8_UP_TIM13_IRQHandler
+                0x08002fc0                I2C3_ER_IRQHandler
+                0x08002fc0                EXTI0_IRQHandler
+                0x08002fc0                I2C2_EV_IRQHandler
+                0x08002fc0                DMA1_Stream2_IRQHandler
+                0x08002fc0                FPU_IRQHandler
+                0x08002fc0                OTG_HS_WKUP_IRQHandler
+                0x08002fc0                CAN2_SCE_IRQHandler
+                0x08002fc0                DMA2_Stream2_IRQHandler
+                0x08002fc0                SPI1_IRQHandler
+                0x08002fc0                TIM1_BRK_TIM9_IRQHandler
+                0x08002fc0                DCMI_IRQHandler
+                0x08002fc0                CAN2_RX0_IRQHandler
+                0x08002fc0                DMA2_Stream3_IRQHandler
+                0x08002fc0                USART6_IRQHandler
+                0x08002fc0                USART3_IRQHandler
+                0x08002fc0                CAN1_RX1_IRQHandler
+                0x08002fc0                UART5_IRQHandler
+                0x08002fc0                DMA2_Stream0_IRQHandler
+                0x08002fc0                TIM4_IRQHandler
+                0x08002fc0                I2C1_EV_IRQHandler
+                0x08002fc0                DMA1_Stream6_IRQHandler
+                0x08002fc0                DMA1_Stream1_IRQHandler
+                0x08002fc0                UART4_IRQHandler
+                0x08002fc0                TIM3_IRQHandler
+                0x08002fc0                RCC_IRQHandler
+                0x08002fc0                TIM8_BRK_TIM12_IRQHandler
+                0x08002fc0                Default_Handler
+                0x08002fc0                EXTI15_10_IRQHandler
+                0x08002fc0                ADC_IRQHandler
+                0x08002fc0                DMA1_Stream7_IRQHandler
+                0x08002fc0                TIM7_IRQHandler
+                0x08002fc0                CAN2_TX_IRQHandler
+                0x08002fc0                TIM5_IRQHandler
+                0x08002fc0                DMA2_Stream7_IRQHandler
+                0x08002fc0                I2C3_EV_IRQHandler
+                0x08002fc0                EXTI9_5_IRQHandler
+                0x08002fc0                RTC_WKUP_IRQHandler
+                0x08002fc0                ETH_WKUP_IRQHandler
+                0x08002fc0                SPI2_IRQHandler
+                0x08002fc0                OTG_HS_EP1_IN_IRQHandler
+                0x08002fc0                DMA1_Stream0_IRQHandler
+                0x08002fc0                CAN1_TX_IRQHandler
+                0x08002fc0                EXTI4_IRQHandler
+                0x08002fc0                FSMC_IRQHandler
+                0x08002fc0                ETH_IRQHandler
+                0x08002fc0                OTG_HS_EP1_OUT_IRQHandler
+                0x08002fc0                WWDG_IRQHandler
+                0x08002fc0                TIM2_IRQHandler
+                0x08002fc0                OTG_FS_WKUP_IRQHandler
+                0x08002fc0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08002fc0                OTG_HS_IRQHandler
+                0x08002fc0                EXTI1_IRQHandler
+                0x08002fc0                USART2_IRQHandler
+                0x08002fc0                I2C2_ER_IRQHandler
+                0x08002fc0                DMA2_Stream1_IRQHandler
+                0x08002fc0                CAN1_SCE_IRQHandler
+                0x08002fc0                FLASH_IRQHandler
+                0x08002fc0                DMA2_Stream4_IRQHandler
+                0x08002fc0                USART1_IRQHandler
+                0x08002fc0                OTG_FS_IRQHandler
+                0x08002fc0                SPI3_IRQHandler
+                0x08002fc0                DMA1_Stream4_IRQHandler
+                0x08002fc0                I2C1_ER_IRQHandler
+                0x08002fc0                DMA2_Stream6_IRQHandler
+                0x08002fc0                DMA1_Stream3_IRQHandler
  .text._ZN3PID4initEffffff
-                0x08002fbe       0x52 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
-                0x08002fbe                PID::init(float, float, float, float, float, float)
+                0x08002fc2       0x52 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+                0x08002fc2                PID::init(float, float, float, float, float, float)
  .text._ZN3PID5resetEv
-                0x08003010       0x34 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
-                0x08003010                PID::reset()
+                0x08003014       0x34 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+                0x08003014                PID::reset()
  .text._ZN3PID8limit_inEf
-                0x08003044       0x5e CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
-                0x08003044                PID::limit_in(float)
+                0x08003048       0x5e CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+                0x08003048                PID::limit_in(float)
  .text._ZN3PID9limit_outEf
-                0x080030a2       0x5e CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
-                0x080030a2                PID::limit_out(float)
+                0x080030a6       0x5e CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+                0x080030a6                PID::limit_out(float)
  .text._ZN3PID6filterEf
-                0x08003100       0x54 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
-                0x08003100                PID::filter(float)
+                0x08003104       0x54 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+                0x08003104                PID::filter(float)
  .text._ZN3PID4calcEff
-                0x08003154       0xe0 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
-                0x08003154                PID::calc(float, float)
+                0x08003158       0xe0 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+                0x08003158                PID::calc(float, float)
  .text._ZN5Motor4initEffffffNS_14ControlMethod_E
-                0x08003234       0x8c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
-                0x08003234                Motor::init(float, float, float, float, float, float, Motor::ControlMethod_)
+                0x08003238       0x88 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x08003238                Motor::init(float, float, float, float, float, float, Motor::ControlMethod_)
  .text._ZN5Motor6handleEv
-                0x080032c0       0xcc CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x080032c0      0x10c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
                 0x080032c0                Motor::handle()
  .text._ZN5Motor4stopEv
-                0x0800338c       0x3c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
-                0x0800338c                Motor::stop()
+                0x080033cc       0x3c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x080033cc                Motor::stop()
  .text._ZN5Motor11setPositionEfff
-                0x080033c8       0x3e CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
-                0x080033c8                Motor::setPosition(float, float, float)
- *fill*         0x08003406        0x2 
+                0x08003408       0x3e CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x08003408                Motor::setPosition(float, float, float)
+ *fill*         0x08003446        0x2 
  .text._ZN5Motor16canRxMsgCallbackEPKh
-                0x08003408      0x114 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
-                0x08003408                Motor::canRxMsgCallback(unsigned char const*)
+                0x08003448      0x114 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x08003448                Motor::canRxMsgCallback(unsigned char const*)
  .text._ZN5Motor12setTxCurrentEf
-                0x0800351c       0x7c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
-                0x0800351c                Motor::setTxCurrent(float)
+                0x0800355c       0x7c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x0800355c                Motor::setTxCurrent(float)
  .text._ZN5Motor9getTxDataEv
-                0x08003598       0x18 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
-                0x08003598                Motor::getTxData()
- .text.memset   0x080035b0       0x10 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
-                0x080035b0                memset
+                0x080035d8       0x18 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x080035d8                Motor::getTxData()
+ .text.sinf     0x080035f0       0x74 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+                0x080035f0                sinf
+ .text.__kernel_cosf
+                0x08003664      0x104 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+                0x08003664                __kernel_cosf
+ .text.__kernel_sinf
+                0x08003768       0x90 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+                0x08003768                __kernel_sinf
+ .text.__ieee754_rem_pio2f
+                0x080037f8      0x26c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+                0x080037f8                __ieee754_rem_pio2f
+ .text.fabsf    0x08003a64       0x10 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+                0x08003a64                fabsf
+ .text.__kernel_rem_pio2f
+                0x08003a74      0x68c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+                0x08003a74                __kernel_rem_pio2f
+ .text.scalbnf  0x08004100       0xdc C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+                0x08004100                scalbnf
+ .text.floorf   0x080041dc       0x94 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+                0x080041dc                floorf
+ .text.memset   0x08004270       0x10 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x08004270                memset
  .text.__libc_init_array
-                0x080035c0       0x48 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
-                0x080035c0                __libc_init_array
+                0x08004280       0x48 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x08004280                __libc_init_array
  *(.glue_7)
- .glue_7        0x08003608        0x0 linker stubs
+ .glue_7        0x080042c8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08003608        0x0 linker stubs
+ .glue_7t       0x080042c8        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08003608        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x080042c8        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08003608        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08003608                _init
- .init          0x0800360c        0x8 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080042c8        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080042c8                _init
+ .init          0x080042cc        0x8 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08003614        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08003614                _fini
- .fini          0x08003618        0x8 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08003620                        . = ALIGN (0x4)
-                0x08003620                        _etext = .
+ .fini          0x080042d4        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080042d4                _fini
+ .fini          0x080042d8        0x8 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080042e0                        . = ALIGN (0x4)
+                0x080042e0                        _etext = .
 
-.vfp11_veneer   0x08003620        0x0
- .vfp11_veneer  0x08003620        0x0 linker stubs
+.vfp11_veneer   0x080042e0        0x0
+ .vfp11_veneer  0x080042e0        0x0 linker stubs
 
-.v4_bx          0x08003620        0x0
- .v4_bx         0x08003620        0x0 linker stubs
+.v4_bx          0x080042e0        0x0
+ .v4_bx         0x080042e0        0x0 linker stubs
 
-.iplt           0x08003620        0x0
- .iplt          0x08003620        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080042e0        0x0
+ .iplt          0x080042e0        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08003620       0x10
-                0x08003620                        . = ALIGN (0x4)
+.rodata         0x080042e0      0x3e0
+                0x080042e0                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08003620       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-                0x08003620                AHBPrescTable
-                0x08003630                        . = ALIGN (0x4)
+                0x080042e0       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+                0x080042e0                AHBPrescTable
+ .rodata.npio2_hw
+                0x080042f0       0x80 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+ .rodata.two_over_pi
+                0x08004370      0x318 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+ .rodata.PIo2   0x08004688       0x2c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+ .rodata.init_jk
+                0x080046b4        0xc C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+                0x080046c0                        . = ALIGN (0x4)
 
-.ARM.extab      0x08003630        0x0
-                0x08003630                        . = ALIGN (0x4)
+.ARM.extab      0x080046c0        0x0
+                0x080046c0                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08003630                        . = ALIGN (0x4)
+                0x080046c0                        . = ALIGN (0x4)
 
-.ARM            0x08003630        0x8
-                0x08003630                        . = ALIGN (0x4)
-                0x08003630                        __exidx_start = .
+.ARM            0x080046c0        0x8
+                0x080046c0                        . = ALIGN (0x4)
+                0x080046c0                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08003630        0x8 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08003638                        __exidx_end = .
-                0x08003638                        . = ALIGN (0x4)
+ .ARM.exidx     0x080046c0        0x8 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080046c8                        __exidx_end = .
+                0x080046c8                        . = ALIGN (0x4)
 
-.preinit_array  0x08003638        0x0
-                0x08003638                        . = ALIGN (0x4)
-                0x08003638                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080046c8        0x0
+                0x080046c8                        . = ALIGN (0x4)
+                0x080046c8                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08003638                        PROVIDE (__preinit_array_end = .)
-                0x08003638                        . = ALIGN (0x4)
+                0x080046c8                        PROVIDE (__preinit_array_end = .)
+                0x080046c8                        . = ALIGN (0x4)
 
-.init_array     0x08003638        0x8
-                0x08003638                        . = ALIGN (0x4)
-                0x08003638                        PROVIDE (__init_array_start = .)
+.init_array     0x080046c8        0x8
+                0x080046c8                        . = ALIGN (0x4)
+                0x080046c8                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08003638        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
- .init_array    0x0800363c        0x4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x08003640                        PROVIDE (__init_array_end = .)
-                0x08003640                        . = ALIGN (0x4)
+ .init_array    0x080046c8        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .init_array    0x080046cc        0x4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x080046d0                        PROVIDE (__init_array_end = .)
+                0x080046d0                        . = ALIGN (0x4)
 
-.fini_array     0x08003640        0x4
-                0x08003640                        . = ALIGN (0x4)
+.fini_array     0x080046d0        0x4
+                0x080046d0                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08003640        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x080046d0        0x4 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08003644                        . = ALIGN (0x4)
-                0x08003644                        _siccmram = LOADADDR (.ccmram)
+                0x080046d4                        . = ALIGN (0x4)
+                0x080046d4                        _siccmram = LOADADDR (.ccmram)
 
-.rel.dyn        0x08003644        0x0
- .rel.iplt      0x08003644        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080046d4        0x0
+ .rel.iplt      0x080046d4        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08003644
+.ccmram         0x10000000        0x0 load address 0x080046d4
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmram = .
  *(.ccmram)
  *(.ccmram*)
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _eccmram = .
-                0x08003644                        _sidata = LOADADDR (.data)
+                0x080046d4                        _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x4c load address 0x08003644
+.data           0x20000000       0x50 load address 0x080046d4
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4005,17 +4135,20 @@ LOAD C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+s
  .data.can_filter_config
                 0x20000024       0x28 CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
                 0x20000024                can_filter_config
+ .data.g_ff_gain
+                0x2000004c        0x4 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+                0x2000004c                g_ff_gain
  *(.RamFunc)
  *(.RamFunc*)
-                0x2000004c                        . = ALIGN (0x4)
+                0x20000050                        . = ALIGN (0x4)
 
-.igot.plt       0x2000004c        0x0 load address 0x08003690
- .igot.plt      0x2000004c        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.igot.plt       0x20000050        0x0 load address 0x08004724
+ .igot.plt      0x20000050        0x0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x2000004c        0x0 load address 0x08003690
+.tdata          0x20000050        0x0 load address 0x08004724
  *(.tdata .tdata.* .gnu.linkonce.td.*)
-                0x2000004c                        . = ALIGN (0x4)
-                0x2000004c                        _edata = .
+                0x20000050                        . = ALIGN (0x4)
+                0x20000050                        _edata = .
                 [!provide]                        PROVIDE (__data_end = .)
                 [!provide]                        PROVIDE (__tdata_end = .)
                 [!provide]                        PROVIDE (__tdata_start = ADDR (.tdata))
@@ -4029,11 +4162,11 @@ LOAD C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+s
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000004c        0x0 load address 0x08003690
-                0x2000004c                        _sbss = .
-                0x2000004c                        __bss_start__ = _sbss
+.tbss           0x20000050        0x0 load address 0x08004724
+                0x20000050                        _sbss = .
+                0x20000050                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
-                0x2000004c                        . = ALIGN (0x4)
+                0x20000050                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__tbss_end = .)
                 [!provide]                        PROVIDE (__tbss_start = ADDR (.tbss))
                 [!provide]                        PROVIDE (__tbss_size = (__tbss_end - __tbss_start))
@@ -4046,55 +4179,56 @@ LOAD C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+s
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000004c      0x17c load address 0x08003690
+.bss            0x20000050      0x17c load address 0x08004724
  *(.bss)
- .bss           0x2000004c       0x1c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x20000050       0x1c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
- .bss.uwTick    0x20000068        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x20000068                uwTick
+ .bss.uwTick    0x2000006c        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x2000006c                uwTick
  .bss.rx_header
-                0x2000006c       0x1c CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
-                0x2000006c                rx_header
+                0x20000070       0x1c CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
+                0x20000070                rx_header
  .bss.can_tx_mailbox
-                0x20000088        0x4 CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
-                0x20000088                can_tx_mailbox
- .bss.motor     0x2000008c       0x94 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x2000008c                motor
+                0x2000008c        0x4 CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
+                0x2000008c                can_tx_mailbox
+ .bss.motor     0x20000090       0x94 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x20000090                motor
  .bss.stop_flag
-                0x20000120        0x1 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x20000120                stop_flag
- *fill*         0x20000121        0x3 
- .bss.tick      0x20000124        0x4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
-                0x20000124                tick
+                0x20000124        0x1 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x20000124                stop_flag
+ *fill*         0x20000125        0x3 
+ .bss.tick      0x20000128        0x4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+                0x20000128                tick
  .bss._ZZ6HANDLEE9last_tick
-                0x20000128        0x4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
- .bss.hcan1     0x2000012c       0x28 CMakeFiles/rm5.dir/Core/Src/can.c.obj
-                0x2000012c                hcan1
- .bss.hcan2     0x20000154       0x28 CMakeFiles/rm5.dir/Core/Src/can.c.obj
-                0x20000154                hcan2
+                0x2000012c        0x4 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+ .bss.hcan1     0x20000130       0x28 CMakeFiles/rm5.dir/Core/Src/can.c.obj
+                0x20000130                hcan1
+ .bss.hcan2     0x20000158       0x28 CMakeFiles/rm5.dir/Core/Src/can.c.obj
+                0x20000158                hcan2
  .bss.HAL_RCC_CAN1_CLK_ENABLED
-                0x2000017c        0x4 CMakeFiles/rm5.dir/Core/Src/can.c.obj
- .bss.htim6     0x20000180       0x48 CMakeFiles/rm5.dir/Core/Src/tim.c.obj
-                0x20000180                htim6
+                0x20000180        0x4 CMakeFiles/rm5.dir/Core/Src/can.c.obj
+ .bss.htim6     0x20000184       0x48 CMakeFiles/rm5.dir/Core/Src/tim.c.obj
+                0x20000184                htim6
  *(COMMON)
-                0x200001c8                        . = ALIGN (0x4)
-                0x200001c8                        _ebss = .
-                0x200001c8                        __bss_end__ = _ebss
+                0x200001cc                        . = ALIGN (0x4)
+                0x200001cc                        _ebss = .
+                0x200001cc                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
                 [!provide]                        PROVIDE (__bss_start = __tbss_start)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x200001c8      0x600 load address 0x08003690
-                0x200001c8                        . = ALIGN (0x8)
+                0x200001cc      0x604 load address 0x08004724
+                0x200001d0                        . = ALIGN (0x8)
+ *fill*         0x200001cc        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x200001c8                        PROVIDE (_end = .)
-                0x200003c8                        . = (. + _Min_Heap_Size)
- *fill*         0x200001c8      0x200 
-                0x200007c8                        . = (. + _Min_Stack_Size)
- *fill*         0x200003c8      0x400 
-                0x200007c8                        . = ALIGN (0x8)
+                0x200001d0                        PROVIDE (_end = .)
+                0x200003d0                        . = (. + _Min_Heap_Size)
+ *fill*         0x200001d0      0x200 
+                0x200007d0                        . = (. + _Min_Stack_Size)
+ *fill*         0x200003d0      0x400 
+                0x200007d0                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -4148,17 +4282,33 @@ LOAD linker stubs
  .ARM.attributes
                 0x000003eb       0x34 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
  .ARM.attributes
-                0x0000041f       0x22 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x0000041f       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
  .ARM.attributes
-                0x00000441       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x00000453       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
  .ARM.attributes
-                0x00000475       0x22 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x00000487       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
  .ARM.attributes
-                0x00000497       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x000004bb       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
  .ARM.attributes
-                0x000004cb       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x000004ef       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
  .ARM.attributes
-                0x000004ff       0x22 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x00000523       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+ .ARM.attributes
+                0x00000557       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+ .ARM.attributes
+                0x0000058b       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+ .ARM.attributes
+                0x000005bf       0x22 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x000005e1       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000615       0x22 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000637       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .ARM.attributes
+                0x0000066b       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .ARM.attributes
+                0x0000069f       0x22 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -4183,7 +4333,7 @@ LOAD linker stubs
  .comment       0x00000043       0x44 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
  .comment       0x00000043       0x44 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_info     0x00000000     0xc7af
+.debug_info     0x00000000     0xdca0
  .debug_info    0x00000000      0x512 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_info    0x00000512      0xf49 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
  .debug_info    0x0000145b      0x8c3 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -4202,11 +4352,11 @@ LOAD linker stubs
  .debug_info    0x0000b810      0x269 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_info    0x0000ba79       0x30 CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
  .debug_info    0x0000baa9      0x336 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
- .debug_info    0x0000bddf      0x7e5 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
- .debug_info    0x0000c5c4       0xe0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_info    0x0000c6a4      0x10b C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_info    0x0000bddf     0x1cd6 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_info    0x0000dab5       0xe0 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_info    0x0000db95      0x10b C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_abbrev   0x00000000     0x2526
+.debug_abbrev   0x00000000     0x2629
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_abbrev  0x0000011a      0x258 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
  .debug_abbrev  0x00000372      0x2b7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -4225,9 +4375,9 @@ LOAD linker stubs
  .debug_abbrev  0x00001f0f       0xd8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_abbrev  0x00001fe7       0x24 CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
  .debug_abbrev  0x0000200b      0x180 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
- .debug_abbrev  0x0000218b      0x234 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
- .debug_abbrev  0x000023bf       0x9e C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_abbrev  0x0000245d       0xc9 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_abbrev  0x0000218b      0x337 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_abbrev  0x000024c2       0x9e C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x00002560       0xc9 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_aranges  0x00000000      0xc60
  .debug_aranges
@@ -4316,7 +4466,7 @@ LOAD linker stubs
  .debug_rnglists
                 0x0000093b       0x13 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_macro    0x00000000    0x229fe
+.debug_macro    0x00000000    0x2683b
  .debug_macro   0x00000000      0x1ce cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x000001ce      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x00000ca6       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -4377,9 +4527,51 @@ LOAD linker stubs
  .debug_macro   0x000225a9      0x1e2 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_macro   0x0002278b      0x1d8 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_macro   0x00022963       0x1b CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
- .debug_macro   0x0002297e       0x80 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002297e      0x363 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00022ce1      0x1f2 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00022ed3       0x10 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00022ee3       0xc1 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00022fa4       0xed CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00023091      0x464 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000234f5      0x712 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00023c07       0x12 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00023c19       0x74 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00023c8d       0x34 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00023cc1      0x380 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00024041       0x4a CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002408b      0x194 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002421f       0x10 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002422f       0x3c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002426b       0x10 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002427b       0x16 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00024291      0x719 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000249aa      0x4f5 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00024e9f       0x16 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00024eb5      0x719 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000255ce       0x1c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000255ea       0x4f CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025639       0x94 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000256cd      0x75c CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025e29       0x1f CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025e48       0x20 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025e68       0x28 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025e90       0x2e CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025ebe       0x12 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025ed0       0x88 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025f58       0x10 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00025f68      0x6ac CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00026614       0x22 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00026636       0x12 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00026648      0x158 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000267a0       0x11 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000267b1       0x17 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000267c8       0x17 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000267df       0x17 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x000267f6       0x17 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x0002680d       0x17 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_macro   0x00026824       0x17 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
 
-.debug_line     0x00000000     0xe65b
+.debug_line     0x00000000     0xeeb0
  .debug_line    0x00000000      0x7c5 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_line    0x000007c5     0x1200 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
  .debug_line    0x000019c5      0xe4e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -4398,35 +4590,35 @@ LOAD linker stubs
  .debug_line    0x0000d49d      0x74f CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_line    0x0000dbec       0x7a CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
  .debug_line    0x0000dc66      0x1de CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
- .debug_line    0x0000de44      0x531 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
- .debug_line    0x0000e375      0x17e C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_line    0x0000e4f3      0x168 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_line    0x0000de44      0xd86 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_line    0x0000ebca      0x17e C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_line    0x0000ed48      0x168 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_str      0x00000000    0xc8b5a
- .debug_str     0x00000000    0xc8b5a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+.debug_str      0x00000000    0xd4ef1
+ .debug_str     0x00000000    0xd4ef1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
                               0xc4412 (size before relaxing)
- .debug_str     0x000c8b5a    0xc4b0c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
- .debug_str     0x000c8b5a    0xc4846 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_str     0x000c8b5a    0xc458d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_str     0x000c8b5a    0xc4d12 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_str     0x000c8b5a    0xc4f96 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_str     0x000c8b5a    0xc579c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
- .debug_str     0x000c8b5a    0xc4fa8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
- .debug_str     0x000c8b5a    0xc43c8 CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
- .debug_str     0x000c8b5a    0xc5a04 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
- .debug_str     0x000c8b5a    0xc4572 CMakeFiles/rm5.dir/Core/Src/main.c.obj
- .debug_str     0x000c8b5a    0xc4362 CMakeFiles/rm5.dir/Core/Src/gpio.c.obj
- .debug_str     0x000c8b5a    0xc4c3b CMakeFiles/rm5.dir/Core/Src/can.c.obj
- .debug_str     0x000c8b5a    0xc4ebe CMakeFiles/rm5.dir/Core/Src/tim.c.obj
- .debug_str     0x000c8b5a    0xc4ad0 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_str     0x000c8b5a    0xc4362 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_str     0x000c8b5a       0x7a CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
- .debug_str     0x000c8b5a     0x3616 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
- .debug_str     0x000c8b5a     0x4949 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
- .debug_str     0x000c8b5a      0x211 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_str     0x000c8b5a      0x272 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_str     0x000d4ef1    0xc4b0c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+ .debug_str     0x000d4ef1    0xc4846 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x000d4ef1    0xc458d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000d4ef1    0xc4d12 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x000d4ef1    0xc4f96 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x000d4ef1    0xc579c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+ .debug_str     0x000d4ef1    0xc4fa8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+ .debug_str     0x000d4ef1    0xc43c8 CMakeFiles/rm5.dir/Usercode/Src/can_user.c.obj
+ .debug_str     0x000d4ef1    0xc5a04 CMakeFiles/rm5.dir/Usercode/Src/callback.cpp.obj
+ .debug_str     0x000d4ef1    0xc4572 CMakeFiles/rm5.dir/Core/Src/main.c.obj
+ .debug_str     0x000d4ef1    0xc4362 CMakeFiles/rm5.dir/Core/Src/gpio.c.obj
+ .debug_str     0x000d4ef1    0xc4c3b CMakeFiles/rm5.dir/Core/Src/can.c.obj
+ .debug_str     0x000d4ef1    0xc4ebe CMakeFiles/rm5.dir/Core/Src/tim.c.obj
+ .debug_str     0x000d4ef1    0xc4ad0 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x000d4ef1    0xc4362 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x000d4ef1       0x7a CMakeFiles/rm5.dir/startup_stm32f407xx.s.obj
+ .debug_str     0x000d4ef1     0x3616 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
+ .debug_str     0x000d4ef1    0x11230 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
+ .debug_str     0x000d4ef1      0x211 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_str     0x000d4ef1      0x272 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_frame    0x00000000     0x2e44
+.debug_frame    0x00000000     0x2fb0
  .debug_frame   0x00000000       0x50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_frame   0x00000050      0x524 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
  .debug_frame   0x00000574      0x1d8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -4444,10 +4636,18 @@ LOAD linker stubs
  .debug_frame   0x00002b28       0x34 CMakeFiles/rm5.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_frame   0x00002b5c       0xe8 CMakeFiles/rm5.dir/Usercode/Src/pid.cpp.obj
  .debug_frame   0x00002c44      0x154 CMakeFiles/rm5.dir/Usercode/Src/motor.cpp.obj
- .debug_frame   0x00002d98       0x2c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00002dc4       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00002df8       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_frame   0x00002e18       0x2c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_frame   0x00002d98       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+ .debug_frame   0x00002dcc       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+ .debug_frame   0x00002dec       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+ .debug_frame   0x00002e0c       0x3c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+ .debug_frame   0x00002e48       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+ .debug_frame   0x00002e68       0x5c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+ .debug_frame   0x00002ec4       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+ .debug_frame   0x00002ee4       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+ .debug_frame   0x00002f04       0x2c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00002f30       0x34 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00002f64       0x20 C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_frame   0x00002f84       0x2c C:/Users/lixin/AppData/Local/stm32cube/bundles/gnu-tools-for-stm32/14.3.1+st.2/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_line_str
                 0x00000000       0x5e
