@@ -1,6 +1,0 @@
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/pid.cpp:11:6:void PID::init(float, float, float, float, float, float)	40	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/pid.cpp:21:6:void PID::reset()	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/pid.cpp:28:7:float PID::limit_in(float)	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/pid.cpp:33:7:float PID::limit_out(float)	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/pid.cpp:38:7:float PID::filter(float)	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/pid.cpp:44:7:float PID::calc(float, float)	40	static

@@ -14,6 +14,7 @@ extern "C"{
 
 Motor motor;
 volatile uint8_t stop_flag = 0;
+volatile uint32_t tick = 0;
 extern "C" void INIT(void) {
     motor.init(0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,Motor::POSITION_SPEED);
     motor.setPosition(0.0f,0.0f,0.0f);
@@ -21,9 +22,15 @@ extern "C" void INIT(void) {
     if (HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) != HAL_OK) Error_Handler();
     if (HAL_CAN_Start(&hcan1) != HAL_OK) Error_Handler();
     if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK) Error_Handler();
+    __HAL_TIM_SET_COUNTER(&htim6,0);
+    __HAL_TIM_CLEAR_FLAG(&htim6,TIM_FLAG_UPDATE);
+    if (HAL_TIM_Base_Start_IT(&htim6) != HAL_OK) Error_Handler();
 }
 
 extern "C" void HANDLE(void) {
+    static uint32_t last_tick = 0;
+    if (tick == last_tick) return;
+    last_tick = tick;
     if (stop_flag != 0)
     {
         motor.stop();
@@ -50,5 +57,10 @@ extern "C" void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan){
         }
 }
 
+extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
+{
+    if (htim->Instance != TIM6) return;
+    tick++;
+}
 
 
