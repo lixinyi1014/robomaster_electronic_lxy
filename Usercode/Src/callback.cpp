@@ -16,8 +16,8 @@ Motor motor;
 volatile uint8_t stop_flag = 0;
 volatile uint32_t tick = 0;
 extern "C" void INIT(void) {
-    motor.init(0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,Motor::POSITION_SPEED);
-    motor.setPosition(0.0f,0.0f,0.0f);
+    motor.init(0.0035f,0.0f,0.0f,54.0f,0.005f,0.0f,Motor::POSITION_SPEED);
+    motor.setPosition(20.0f,0.0f,0.0f);
     stop_flag = 0;
     if (HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) != HAL_OK) Error_Handler();
     if (HAL_CAN_Start(&hcan1) != HAL_OK) Error_Handler();

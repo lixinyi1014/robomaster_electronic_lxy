@@ -6,6 +6,8 @@
 #define RM5_MOTOR_H
 #include "pid.h"
 #include <stdint.h>
+
+
 class Motor {
 public:
     typedef enum ControlMethod_{

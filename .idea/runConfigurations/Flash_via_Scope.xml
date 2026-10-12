@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Flash via Scope" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-NoProfile -ExecutionPolicy Bypass -File &quot;$PROJECT_DIR$/tools/scope_flash.ps1&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rm5" TARGET_NAME="rm5" CONFIG_NAME="Debug - Debug" RUN_PATH="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
