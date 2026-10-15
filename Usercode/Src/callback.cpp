@@ -16,9 +16,10 @@ Motor motor;
 volatile uint8_t stop_flag = 0;
 volatile uint32_t tick = 0;
 extern "C" void INIT(void) {
-    motor.init(0.0041f,0.00005f,0.0f,120.0f,0.0f,35.0f,Motor::POSITION_SPEED);
+
+    motor.init(0.0045f,0.00005f,0.0f,120.0f,0.0f,35.0f,Motor::POSITION_SPEED);
     motor.setPosition(0.0f,0.0f,0.0f);
-    stop_flag = 0;
+    stop_flag = 1;
     if (HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) != HAL_OK) Error_Handler();
     if (HAL_CAN_Start(&hcan1) != HAL_OK) Error_Handler();
     if (HAL_CAN_ActivateNotification(&hcan1,CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK) Error_Handler();
@@ -28,6 +29,7 @@ extern "C" void INIT(void) {
 }
 
 extern "C" void HANDLE(void) {
+    stop_flag = 0;
     static uint32_t last_tick = 0;
     if (tick == last_tick) return;
     last_tick = tick;
