@@ -15,10 +15,12 @@ extern "C"{
 Motor motor;
 volatile uint8_t stop_flag = 0;
 volatile uint32_t tick = 0;
+volatile uint32_t last_rx_tick = 0;
+volatile bool rx_seen = 0;
 extern "C" void INIT(void) {
 
-    motor.init(0.0045f,0.00005f,0.0f,120.0f,0.0f,35.0f,Motor::POSITION_SPEED);
-    motor.setPosition(0.0f,0.0f,0.0f);
+    motor.init(0.006f,0.0001f,0.001f,170.0f,10.0f,0.0f,Motor::POSITION_SPEED);
+    //motor.setPosition(0.0f,0.0f,0.0f);
     stop_flag = 1;
     if (HAL_CAN_ConfigFilter(&hcan1,&can_filter_config) != HAL_OK) Error_Handler();
     if (HAL_CAN_Start(&hcan1) != HAL_OK) Error_Handler();
@@ -29,10 +31,10 @@ extern "C" void INIT(void) {
 }
 
 extern "C" void HANDLE(void) {
-    stop_flag = 0;
     static uint32_t last_tick = 0;
     if (tick == last_tick) return;
     last_tick = tick;
+    stop_flag = !(rx_seen && (uint32_t)(tick-last_rx_tick)<50);
     if (stop_flag != 0)
     {
         motor.stop();
@@ -43,9 +45,11 @@ extern "C" void HANDLE(void) {
     }
 
     if (HAL_CAN_GetTxMailboxesFreeLevel(&hcan1) == 0) return;
-    if (HAL_CAN_AddTxMessage(&hcan1,&tx_header,motor.getTxData(),&can_tx_mailbox) != HAL_OK) stop_flag = 1;
+    if (HAL_CAN_AddTxMessage(&hcan1,&tx_header,motor.getTxData(),&can_tx_mailbox) != HAL_OK){
+        stop_flag = 1;
+        motor.stop();
+    }
 }
-
 constexpr uint32_t kMotor1FeedbackId = 0x201;
 
 extern "C" void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan){
@@ -56,6 +60,8 @@ extern "C" void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan){
     if (rx_header.IDE==CAN_ID_STD && rx_header.RTR == CAN_RTR_DATA
         && rx_header.DLC == 8 && rx_header.StdId == kMotor1FeedbackId){
         motor.canRxMsgCallback(data);
+        last_rx_tick = tick;
+        rx_seen = 1;
         }
 }
 

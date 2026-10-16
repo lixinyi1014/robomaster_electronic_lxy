@@ -5,7 +5,7 @@
 #include "motor.h"
 #include "pid.h"
 #include <math.h>
-volatile float g_ff_gain = -0.36f;//0.1*9.8*0.065/0.18 = 0.354
+volatile float g_ff_gain = 0.36f;//0.1*9.8*0.065/0.18 = 0.354
 volatile float speed = 0.0f;
 void Motor::init(float sKp,float sKi,float sKd,
              float pKp,float pKi,float pKd,
@@ -21,6 +21,7 @@ void Motor::handle() {
     fdb_angle_ = angle_;
     fdb_speed_ = speedRpm_;
     feedforward_intensity_ = g_ff_gain * sinf((angle_) * 3.14f/180.0f);
+    intensity_ = feedforward_intensity_;
     if (control_method_ == POSITION_SPEED)
     {
         target_speed_ = ppid_.calc(target_angle_,fdb_angle_) + feedforward_speed_;
@@ -30,7 +31,7 @@ void Motor::handle() {
     {
         intensity_ = spid_.calc(target_speed_,fdb_speed_) + feedforward_intensity_;
     }
-    //这里我先假装torque这个模块不会启用到（）感觉没必要
+
 
     setTxCurrent(intensity_);
 }

@@ -1,9 +1,9 @@
 C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:10:6:void Motor::init(float, float, float, float, float, float, ControlMethod_e)	40	static
 C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:19:6:void Motor::handle()	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:37:6:void Motor::stop()	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:43:6:void Motor::setPosition(float, float, float)	24	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:49:6:void Motor::setSpeed(float, float)	24	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:54:6:void Motor::setIntensity(float)	16	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:59:6:void Motor::canRxMsgCallback(const uint8_t*)	24	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:79:6:void Motor::setTxCurrent(float)	24	static
-C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:88:10:uint8_t* Motor::getTxData()	16	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:38:6:void Motor::stop()	16	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:44:6:void Motor::setPosition(float, float, float)	24	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:50:6:void Motor::setSpeed(float, float)	24	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:55:6:void Motor::setIntensity(float)	16	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:60:6:void Motor::canRxMsgCallback(const uint8_t*)	24	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:80:6:void Motor::setTxCurrent(float)	24	static
+C:/Users/lixin/Desktop/RM/rm5/Usercode/Src/motor.cpp:89:10:uint8_t* Motor::getTxData()	16	static
