@@ -92,6 +92,7 @@ void IMU::initIMU_() {
     float sum_x = 0.0f ,sum_y = 0.0f,sum_z = 0.0f;
     float acc_init[3] = {0.0f, 0.0f, 0.0f};
     for (uint16_t i = 0; i < 1000; i++) {
+        acc_calculate();
         gyro_calculate();
         sensorDataTransform();
         sum_x += gyro_sensor_[0];
@@ -105,12 +106,19 @@ void IMU::initIMU_() {
     gyro_bias_[0] = sum_x/1000.0f;
     gyro_bias_[1] = sum_y/1000.0f;
     gyro_bias_[2] = sum_z/1000.0f;
-    accel_bias_[0] += acc_init[0]/1000.0f;
-    accel_bias_[1] += acc_init[1]/1000.0f;
-    accel_bias_[2] += acc_init[2]/1000.0f;
+    float acc_avg[3] = { acc_init[0] / 1000.0f, acc_init[1] / 1000.0f, acc_init[2] / 1000.0f };
+    mahony_.init(acc_avg);
 }
 
-
+void IMU::mahonyTransform(void) {
+    mahony_.update(gyro_sensor_, accel_sensor_, dt);
+    roll  = mahony_.roll;
+    pitch = mahony_.pitch;
+    yaw   = mahony_.yaw;
+    roll_deg  = roll  * 57.2957795f;
+    pitch_deg = pitch * 57.2957795f;
+    yaw_deg   = yaw   * 57.2957795f;
+}
 //----------------------纯纯外用如下------------------
 IMU imu;
 //读取并换算单位 → 安装方向变换 → 加速度比例修正、扣除偏置 → Mahony 姿态解算
@@ -120,7 +128,8 @@ extern "C" void imu_update(uint32_t tick, uint32_t last_tick) {
     imu.gyro_calculate();
 
     imu.sensorDataTransform();
-    imu.rpyTransform();
+    //imu.rpyTransform();
+    imu.mahonyTransform();
 }
 
 extern "C" void imu_init(void) {

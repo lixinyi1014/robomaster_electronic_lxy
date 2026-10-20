@@ -6,9 +6,12 @@
 #define RM_6_IMU_H
 #include "bmi.h"
 
-#ifdef __cplusplus            // 只有 C++ 文件能看到这个类
+#ifdef __cplusplus
+#include "mahony.h"
 class IMU {
 public:
+    void mahonyTransform(void);
+
     void acc_calculate();
     void gyro_calculate();
     void sensorDataTransform(void);
@@ -34,6 +37,7 @@ public:
                              {0.0f , 1.0f,  0.0f},
                              {0.0f , 0.0f, 1.0f}};
 private:
+    Mahony mahony_;
     float dt = 1.0f / 1000.0f;
     uint8_t raw_range;
     uint8_t rx_acc_data[6];
