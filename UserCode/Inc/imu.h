@@ -18,6 +18,8 @@ public:
     void rpyTransform(void);
     void initIMU_();
 
+    void dmaUpdate(const int16_t acc_raw[3], const int16_t gyro_raw[3]);
+
     void calculate_dt(uint32_t tick, uint32_t last_tick);
     //raw
     float acc[3];
@@ -47,9 +49,11 @@ private:
     float gyro_bias_[3] = {0.0f, 0.0f, 0.0f};
     float accel_bias_[3] = {0.0f, 0.0f, 0.0f};
 
+    float acc_scale_ = 0.0f;
+    float gyro_scale_ = 0.0f;
 
 };
-
+extern IMU imu;
 extern "C" {
 #endif
 

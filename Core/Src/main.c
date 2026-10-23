@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
@@ -92,12 +93,16 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM6_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   imu_ok = bmi088_init();
-  if (imu_ok) imu_init();
-  HAL_TIM_Base_Start_IT(&htim6);
+  if (imu_ok) {
+    imu_init();
+    bmi088_dma_start();
+  }
+  //HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 
   /* Infinite loop */

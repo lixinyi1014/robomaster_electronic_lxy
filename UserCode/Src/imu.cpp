@@ -84,6 +84,10 @@ void IMU::rpyTransform(void){
 
 
 void IMU::initIMU_() {
+    bmi088_accel_read_reg(0x41, &raw_range, 1);
+    acc_scale_  = 1.5f * (float)(1 << ((raw_range & 0x03) + 1)) * 9.80665f / 32768.0f;
+    bmi088_gyro_read_reg(0x0F, &raw_range, 1);
+    gyro_scale_ = (float)(2000 >> (raw_range & 0x07)) / 32768.0f * 3.1415926f / 180.0f;
     for (uint8_t i = 0; i < 3; i++) {
         gyro_bias_[i] = 0.0;
         accel_bias_[i] = 0.0f;
@@ -118,6 +122,15 @@ void IMU::mahonyTransform(void) {
     roll_deg  = roll  * 57.2957795f;
     pitch_deg = pitch * 57.2957795f;
     yaw_deg   = yaw   * 57.2957795f;
+}
+void IMU::dmaUpdate(const int16_t acc_raw[3], const int16_t gyro_raw[3]) {
+    for (int i = 0; i < 3; i++) {
+        acc[i]  = acc_raw[i]  * acc_scale_;
+        gyro[i] = gyro_raw[i] * gyro_scale_;
+    }
+    dt = 0.001f;                 // 由陀螺仪 1kHz 驱动，相邻两次相隔 1ms
+    sensorDataTransform();       // 下面两步完全不变
+    mahonyTransform();
 }
 //----------------------纯纯外用如下------------------
 IMU imu;

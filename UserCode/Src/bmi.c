@@ -117,6 +117,17 @@ uint8_t bmi088_init(void) {
     if (gyro_id != 0x0F) {
         return 0;
     }
+    bmi088_accel_write_single_reg(0x53,0x08);//INT1_IO_CTRL输出使能
+    HAL_Delay(1);
+    bmi088_accel_write_single_reg(0x58,0x04);//数据就绪
+    HAL_Delay(1);
+    bmi088_gyro_write_single_reg(0x15,0x80);
+    HAL_Delay(1);
+    bmi088_gyro_write_single_reg(0x16,0x00);
+    HAL_Delay(1);
+    bmi088_gyro_write_single_reg(0x18,0x01);
+    HAL_Delay(1);
+
 
     // Switch ACCEL to Active Mode
     bmi088_accel_write_single_reg(0x7C, 0x00); // ACC_PWR_CONF
@@ -156,3 +167,108 @@ uint8_t bmi088_init(void) {
     return 1;
 }
 
+#define DEV_NONE 0
+#define DEV_ACC 1
+#define DEV_GYRO 2
+
+static uint8_t acc_tx[8] = {0x12 | 0x80};
+static uint8_t acc_rx[8];
+static uint8_t gyro_tx[7] = {0x02 | 0x80};
+static uint8_t gyro_rx[7];
+
+static volatile uint8_t dma_ready = 0;
+static volatile uint8_t spi_busy = 0;
+static volatile uint8_t spi_device = DEV_NONE;
+static volatile uint8_t acc_pending = 0;
+static volatile uint8_t gyro_pending = 0;
+static volatile uint8_t gyro_new = 0;
+
+static volatile int16_t acc_raw[3];
+static volatile int16_t gyro_raw[3];
+
+volatile uint32_t dma_cnt = 0;
+
+static void dma_try_start(void) {
+    if (spi_busy) return;
+
+    if (gyro_pending) {
+        gyro_pending = 0;
+        spi_busy = 1;
+        spi_device = DEV_GYRO;
+        BMI088_ACCEL_NS_H();
+        BMI088_GYRO_NS_L();
+        if (HAL_SPI_TransmitReceive_DMA(&hspi1,gyro_tx,gyro_rx,7) != HAL_OK) {
+            BMI088_GYRO_NS_H();
+            spi_busy = 0;
+            spi_device = DEV_NONE;
+        }
+    } else if (acc_pending) {
+        acc_pending = 0;
+        spi_busy = 1;
+        spi_device = DEV_ACC;
+        BMI088_GYRO_NS_H();
+        BMI088_ACCEL_NS_L();
+        if (HAL_SPI_TransmitReceive_DMA(&hspi1,acc_tx,acc_rx,8) != HAL_OK) {
+            BMI088_ACCEL_NS_H();
+            spi_busy = 0;
+            spi_device = DEV_NONE;
+        }
+    }
+}
+
+void bmi088_exti_handler(uint16_t pin) {
+    if (!dma_ready) return;
+    if (pin == INT1_ACCEL_Pin) acc_pending = 1;
+    else if (pin == INT1_GYRO_Pin) gyro_pending = 1;
+    else return;
+    dma_try_start();
+}
+
+void bmi088_spi_done_handler(void) {
+    if (spi_device == DEV_GYRO) {
+        BMI088_GYRO_NS_H();
+        for (int i = 0; i < 3; i++) {
+            gyro_raw[i] = (int16_t)((gyro_rx[2*(i+1)]<<8|gyro_rx[2*i+1]));
+        }
+        gyro_new =1;
+    }
+    else if (spi_device == DEV_ACC) {
+        BMI088_ACCEL_NS_H();
+        for (int i = 0; i < 3; i++) {
+            acc_raw[i] = (int16_t)((acc_rx[2*(i+1)+1]<<8|acc_rx[2*(i+1)]));
+        }
+    }
+    dma_cnt++;
+    spi_device = DEV_NONE;
+    spi_busy = 0;
+    dma_try_start();
+}
+
+void bmi088_spi_error_handler(void) {
+    BMI088_ACCEL_NS_H();
+    BMI088_GYRO_NS_H();
+    spi_busy = 0;
+    spi_device = DEV_NONE;
+}
+
+void bmi088_dma_start(void) {
+    __disable_irq();
+    dma_ready = 1;
+    acc_pending = 1;
+    gyro_pending = 1;
+    dma_try_start();
+    __enable_irq();
+}
+
+uint8_t bmi088_get_raw(int16_t acc[3], int16_t gyro[3]) {
+    if (!gyro_new) return 0;
+    __disable_irq();
+    for (int i = 0;i<3;i++) {
+        acc[i] = acc_raw[i];
+        gyro[i] = gyro_raw[i];
+    }
+    gyro_new = 0;
+    __enable_irq();
+    return 1;
+
+}
