@@ -49,10 +49,13 @@
  *   <cmath>：std::sin 等数学函数。
  */
 #include "arm.h"  // 引入 Arm 的类声明、成员变量和所依赖的类型。
-
-#include "task.h"
 #include "FreeRTOS.h"
+#include "task.h"
+
 #include "base\common\math.h"
+#include <cmath>
+
+#include "stm32f4xx_hal.h"
 
 /*
  * 【01 构造函数】把两台现有 Motor 对象交给 Arm 管理。
@@ -85,7 +88,7 @@ bool Arm::feedbackReady() {
   // 第2步：对 J1 做相同检查；只收到一台电机的反馈还不够。
   if (!joint0_.connect_.check() || !joint1_.connect_.check()) return false;
   // 第3步：检查两台 Motor 的 mode_ 都不是 INIT，避免使用初始化中的角度。
-  if ((joint0_.mode_ != Motor::Mode_e::INIT)||(joint1_.mode_ != Motor::Mode_e::INIT)) return false;
+  if ((joint0_.mode_ == Motor::Mode_e::INIT)||(joint1_.mode_ == Motor::Mode_e::INIT)) return false;
   // 第4步：用逻辑与 && 合并这些条件，并返回判断结果。
   // 注意：这里不检查 calibrated_。能收到反馈不等于已经知道机械零位。
   //return false;  // 原模板占位；目前无论状态如何都返回 false。
@@ -129,7 +132,10 @@ bool Arm::calibrate(float q0, float q1) {
   // 第3步：进入短临界区 taskENTER_CRITICAL，防止 CAN 回调同时改反馈。
   taskENTER_CRITICAL();
   // 第4步：在临界区内检查 feedbackReady；失败时先退出临界区再返回。
-  if (!feedbackReady()) taskEXIT_CRITICAL();
+  if (!feedbackReady()) {
+    taskEXIT_CRITICAL();
+    return false;
+  }
   // 第5步：把两个 rad 输入转成 deg，分别调用两台 Motor 的 resetFeedbackAngle。
   joint0_.resetFeedbackAngle(math::rad2deg(q0));
   joint1_.resetFeedbackAngle(math::rad2deg(q1));
@@ -249,17 +255,31 @@ bool Arm::applyReference(const Reference& reference) {
  * 谁调用（待补上层）：robotControl 的“左上右上”摇杆控制分支。
  * 要调用谁：trajRunning、math::limit、applyReference。
  */
-bool Arm::addJointReference(float, float, float) {
+bool Arm::addJointReference(float speed0, float speed1, float dt_s) {
   // 第1步：若不是 Mode::Joint，或已有轨迹运行，返回 false。
+  if (mode_ != Mode::Joint || trajRunning()) return false;
   // 第2步：把 reference_ 复制为局部 next；用两个速度分别处理两个关节。
+  Reference next = reference_;
   // 第3步：计算 next_q = 原目标角 + 输入角速度 * dt_s。
+  next.q[0] = next.q[0] + speed0*dt_s;
+  next.q[1] = next.q[1] + speed1*dt_s;
   //        用原目标积分可保持目标连续，不要每次用滞后的实际反馈重新起算。
   // 第4步：用 math::limit 将 next_q 限制在对应角度上下限内。
+  next.q[0] = math::limit(next.q[0], limits_.q_min[0], limits_.q_max[0]);
+  next.q[1] = math::limit(next.q[1], limits_.q_min[1], limits_.q_max[1]);
   // 第5步：把输入角速度写入 next.dq，作为速度前馈。
+  next.dq[0] = speed0; next.dq[1] = speed1;
   // 第6步：若已碰到限位且仍向外运动，则把该关节 next.dq 置零。
+  for (int i = 0; i < 2; i++) {
+    if ((next.q[i] <= limits_.q_min[i] && next.dq[i] < 0.0f) || (next.q[i] >= limits_.q_max[i] && next.dq[i] > 0.0f)) {
+      next.dq[i] = 0.0f;
+    }
+  }
   // 第7步：手动分支没有规划加速度时，将 next.ddq 置零。
+  next.ddq[0] = 0.0f; next.ddq[1] = 0.0f;
   // 第8步：调用 applyReference(next) 并返回结果；不要在这里发送 CAN。
-  return false;  // 原模板占位。
+  return applyReference(next);
+  //return true;  // 原模板占位。
 }
 
 /*
@@ -270,10 +290,13 @@ bool Arm::addJointReference(float, float, float) {
  */
 bool Arm::trajectoryReady() {
   // 第1步：检查 mode_ == Mode::Joint。
+  if (mode_ != Mode::Joint) return false;
   // 第2步：检查 calibrated_ 和 feedbackReady()。
+  if (!calibrated_||!feedbackReady()) return false;
   // 第3步：检查 !trajRunning()，防止新轨迹覆盖尚未结束的轨迹。
+  if (trajRunning()) return false;
   // 第4步：返回这些条件的逻辑与；这里只检查，不自动使能或自动标定。
-  return false;  // 原模板占位。
+  return true;  // 原模板占位。
 }
 
 /*
@@ -284,20 +307,32 @@ bool Arm::trajectoryReady() {
  * 要调用谁：trajectoryReady、ArmKinematics::forward / lineReachable、
  *           withinLimits、trajectory_.start、std::sin、HAL_GetTick。
  */
-bool Arm::trajStart(float, float, float) {
+bool Arm::trajStart(float x_m, float y_m, float duration_s) {
   // 第1步：trajectoryReady 不满足就返回 false。
+  if (!trajectoryReady()) return false;
   // 第2步：创建末端终点 end，写入 x_m、y_m。
+  CartesianReference end{};
+  end.x = x_m;
+  end.y = y_m;
   // 第3步：用 forward(reference_.q) 计算起点，取的是上一段规划目标。
+  const CartesianReference start = ArmKinematics::forward(reference_.q);
   //        不能换成 state_.q，否则跟踪误差会使下一条边的规划起点偏离顶点。
   // 第4步：检查起始关节角 withinLimits；检查整条直线 lineReachable。
+  if (!withinLimits(reference_.q) || !ArmKinematics::lineReachable(start,end)) return false;
+
   // 第5步：调用 trajectory_.start(start, end, duration_s)，失败则返回 false。
+  if (!trajectory_.start(start,end,duration_s)) return false;
   // 第6步：根据 sin(reference_.q[1]) 的正负保存 trajectory_elbow_ = +1 或 -1。
+  trajectory_elbow_ = (sin(reference_.q[1])>0? 1:-1);
   //        这决定后续逆解保持哪种弯肘姿态，累计圈数仍由 inverse 保留。
   // 第7步：用 HAL_GetTick 保存 trajectory_start_tick_（单位是 ms）。
+  trajectory_start_tick_ = HAL_GetTick();
   // 第8步：设置 trajectory_type_ = Cartesian，trajectory_finished_ = false。
+  trajectory_type_ = TrajectoryType::Cartesian;
+  trajectory_finished_ = false;
   // 第9步：返回 true。此时只是“已启动”，并不是已经走到终点。
   // 后续每次 handle 会推进一点；这里不能用 while 或延时等它走完。
-  return false;  // 原模板占位。
+  return true;  // 原模板占位。
 }
 
 /*
@@ -307,18 +342,30 @@ bool Arm::trajStart(float, float, float) {
  * 谁调用（待补上层）：robotControl 求出 A 点逆解后，启动约 2 s 的预备动作。
  * 要调用谁：trajectoryReady、withinLimits、updateFeedback、HAL_GetTick。
  */
-bool Arm::trajStartJoint(float, float, float) {
+bool Arm::trajStartJoint(float q0_rad, float q1_rad, float duration_s) {
   // 第1步：把两个输入角组成 end[2]。
+  float joint_trajectory_end[2] = {q0_rad,q1_rad};
   // 第2步：检查 trajectoryReady、终点限位和 duration_s > 0。
+  if (!trajectoryReady() || !withinLimits(joint_trajectory_end) || duration_s <= 0.0f) return false;
   // 第3步：updateFeedback 读取实际姿态，再检查起始反馈角没有越限。
+  updateFeedback();
+  if (!withinLimits(state_.q)) return false;
   // 第4步：reference_ 清零；保存 state_.q 为 joint_trajectory_start_。
+  reference_ = {};
+  joint_trajectory_start_[0] = state_.q[0]; joint_trajectory_start_[1] = state_.q[1];
+  joint_trajectory_end_[0] = joint_trajectory_end[0]; joint_trajectory_end_[1] = joint_trajectory_end[1];
   // 第5步：保存 end 为 joint_trajectory_end_，并以当前 state_.q 初始化位置目标。
+
   // 第6步：保存 joint_trajectory_duration_ 和 trajectory_start_tick_。
+  joint_trajectory_duration_ = duration_s;
+  trajectory_start_tick_  = HAL_GetTick();
   // 第7步：设置 trajectory_type_ = Joint，trajectory_finished_ = false。
+  trajectory_type_ = TrajectoryType::Joint;
+  trajectory_finished_ = false;
   // 第8步：返回 true。后续由 trajectoryPlanner 对两个角使用同一时间插值。
   // 注意：本函数从实际反馈起步，适合预备运动；它不保证末端走直线。
   // 从伸直零位出发时，关节插值也不需要在该奇异起点求逆雅可比。
-  return false;  // 原模板占位。
+  return true;  // 原模板占位。
 }
 
 /*
@@ -330,10 +377,16 @@ bool Arm::trajStartJoint(float, float, float) {
  */
 void Arm::trajAbort() {
   // 第1步：trajectory_.abort()，清除末端插值器内部的 running_。
+  trajectory_.abort();
   // 第2步：设置 trajectory_type_ = None，终止 Arm 层的两种轨迹。
+  trajectory_type_ = TrajectoryType::None;
   // 第3步：设置 trajectory_finished_ = false，表明这是取消，不是正常完成。
+  trajectory_finished_ = false;
   // 第4步：两个关节 reference_.dq、reference_.ddq 全部置零。
+  reference_.dq[0] = 0.0f;reference_.dq[1] = 0.0f;
+  reference_.ddq[0] = 0.0f;reference_.ddq[1] = 0.0f;
   // 第5步：保留 reference_.q，让已使能的电机保持最后的规划位置目标。
+
   // 注意：不要把“取消”写成“正常完成”，否则上层可能自动启动下一条边。
   // 注意：保持的是最后的目标，不一定等于实际反馈位置；取消也不等于失能。
 }
@@ -349,16 +402,51 @@ void Arm::trajAbort() {
  */
 void Arm::trajectoryPlanner() {
   // 第1步：没有轨迹运行就直接 return，保留原来的位置目标。
+  if (trajectory_type_ == TrajectoryType::None) return;
   // 第2步：elapsed_s = (HAL_GetTick() - trajectory_start_tick_) * 0.001f。
   //        时间差先用无符号计数计算，再换算成秒；不要把 ms 当 s。
-  //
+  float elapsed_s = static_cast<float>(HAL_GetTick() - trajectory_start_tick_) * 0.001f;
   // 第3步：如果轨迹类型是 Joint（预备运动）：
   //   3.1 创建局部 Reference next，两个关节使用同一个 elapsed_s 和总用时。
   //   3.2 分别调用 interpolate，填写 next.q、next.dq、next.ddq。
   //   3.3 applyReference(next) 失败则 trajAbort。
   //   3.4 成功且时间已到终点：类型设为 None，finished 设为 true。
   //   3.5 直接 return，不能继续执行下面的末端直线分支。
-  //
+  if (trajectory_type_ == TrajectoryType::Joint) {
+    Reference next = {};
+    for (int i = 0; i < 2; i++) {
+      ArmTrajectory::interpolate(joint_trajectory_start_[i],joint_trajectory_end_[i],
+        elapsed_s,joint_trajectory_duration_,next.q[i],next.dq[i],next.ddq[i]);
+    }
+    if (!applyReference(next)) trajAbort();
+    else if (elapsed_s >= joint_trajectory_duration_) {
+      trajectory_type_ = TrajectoryType::None;
+      trajectory_finished_ = true;
+    }
+    return;
+  }
+
+  if (trajectory_type_ == TrajectoryType::Cartesian) {
+    const CartesianReference point = trajectory_.sample(elapsed_s);
+    Reference next{};
+    if (!ArmKinematics::inverse(point, reference_.q, trajectory_elbow_, next.q)) {
+      trajAbort();
+      return;
+    }
+    if (!ArmKinematics::derivatives(point, next.q, next.dq, next.ddq)) {
+      trajAbort();
+      return;
+    }
+    if (!applyReference(next)) {
+      trajAbort();
+      return;
+    }
+    if (!trajectory_.running()) {
+      trajectory_type_ = TrajectoryType::None;
+      trajectory_finished_ = true;
+    }
+
+  }
   // 第4步：如果轨迹类型是 Cartesian（末端直线）：
   //   4.1 trajectory_.sample(elapsed_s) 得到末端位置、速度、加速度。
   //   4.2 inverse(point, reference_.q, trajectory_elbow_, next.q) 求关节角。
@@ -382,6 +470,18 @@ void Arm::trajectoryPlanner() {
  * 要调用谁：Motor::realAngle / realSpeed、math::deg2rad，以及临界区宏。
  */
 void Arm::updateFeedback() {
+  float q[2];
+  float dq[2];
+  taskENTER_CRITICAL();
+  q[0] = joint0_.realAngle();
+  q[1] = joint1_.realAngle();
+  dq[0] = joint0_.realSpeed();
+  dq[1] = joint1_.realSpeed();
+  taskEXIT_CRITICAL();
+  for (int i = 0; i < 2; i++) {
+    state_.q[i] = math::deg2rad(q[i]);
+    state_.dq[i] = math::deg2rad(dq[i]);
+  }
   // 第1步：准备局部 q[2]、dq[2]，暂存 Motor 的 deg 和 deg/s。
   // 第2步：进入短临界区，再读取 J0、J1 的角度和角速度到局部数组。
   // 第3步：退出临界区，使 CAN 中断可以继续更新反馈。
@@ -400,6 +500,15 @@ void Arm::updateFeedback() {
  *           writeMotorCommands。
  */
 void Arm::handle() {
+  updateFeedback();
+  if (!feedbackReady()) {
+    calibrated_ = false;
+    disable();
+    return;
+  }
+  if (mode_ == Mode::Disabled) return;
+  trajectoryPlanner();
+  writeMotorCommands();
   // 第1步：updateFeedback，更新 Arm 保存的实际状态。
   // 第2步：若 feedbackReady 为 false：
   //        清除 calibrated_，调用 disable，然后立即 return。
@@ -420,6 +529,12 @@ void Arm::handle() {
  * 要调用谁：math::rad2deg、两台 Motor 的 setAngleSpeed。
  */
 void Arm::writeMotorCommands() {
+  joint0_.method_ = Motor::POSITION_SPEED;
+  joint1_.method_ = Motor::POSITION_SPEED;
+  joint0_.setAngleSpeed(math::rad2deg(reference_.q[0]), math::rad2deg(reference_.dq[0]), feedforward_.k_acc[0] * reference_.ddq[0]);
+  joint1_.setAngleSpeed(math::rad2deg(reference_.q[1]), math::rad2deg(reference_.dq[1]), feedforward_.k_acc[1] * reference_.ddq[1]);
+  joint0_.mode_ = Motor::WORKING;
+  joint1_.mode_ = Motor::WORKING;
   // 第1步：将两台 Motor 的 method_ 设为 POSITION_SPEED（位置+速度双环）。
   // 第2步：对 J0，把 reference_.q[0] 从 rad 转成 deg。
   // 第3步：把 reference_.dq[0] 从 rad/s 转成 deg/s，作为速度前馈。
